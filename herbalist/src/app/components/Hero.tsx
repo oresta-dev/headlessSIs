@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getHomeInfo } from "../lib/get-home-info"
 
 export const Hero = async () => {
@@ -47,8 +48,14 @@ export const Hero = async () => {
         <div className="hidden xl:block absolute top-0 bottom-0 right-0 bg-[#214842] w-screen" style={{ left: '50%' }}></div>
 
         <article className="bg-[#214842] px-6 py-20 relative flex items-center justify-center flex-col gap-4 text-center text-white xl:flex xl:min-h-screen xl:w-1/2 xl:pt-72 xl:justify-start xl:items-end xl:pr-0">
-        <img src="/img_hero.png" className="w-40 xl:absolute xl:w-[24rem] xl:left-[-13rem] xl:top-[6rem]" alt="" />
-
+        {/* <img src="/img_hero.png" className="w-40 xl:absolute xl:w-[24rem] xl:left-[-13rem] xl:top-[6rem]" alt="" /> */}
+        <Image 
+            src="/img/hero.png" 
+            className="w-40 xl:w-full" 
+            alt="Hero image"
+            width={400}    // Este valor debe ajustarse a las dimensiones reales de tu imagen
+            height={300}   // Este valor debe ajustarse a las dimensiones reales de tu imagen
+        />
         <div className="flex flex-col gap-4 xl:max-w-[400px] xl:text-balance xl:text-left xl:items-start ">
             <h2 className="font-bold text-3xl ">Purple Hwaiian Haze</h2>
             <p className="font-medium">Nisl vel pretium lectus quam id leo in viate. Pellentesque adipiscing commodo elit at imperdiet</p>

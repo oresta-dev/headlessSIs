@@ -1,7 +1,6 @@
 // src/components/Navbar.tsx
-'use client';  // Marca este componente como Client Component
-
-import Image from "next/image";
+'use client';  // 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar(): JSX.Element {
@@ -29,19 +28,27 @@ export default function Navbar(): JSX.Element {
             lg:blur-none z-50 lg:static lg:min-h-fit lg:flex-row lg:w-full lg:max-w-max 
             lg:backdrop-blur-0
             ${isMenuOpen ? 'right-0' : 'right-[-100%]'}`}>
-            <li className="mt-44 lg:m-0">
-              <a href="/" className="nav-link hover:text-gray-300">Inicio</a>
-            </li>
-            <li>
-              <a href="/services" className="nav-link hover:text-gray-300">Nosotros</a>
-            </li>
-            <li>
-              <a href="#" className="nav-link hover:text-gray-300">Servicios</a>
-            </li>
-            <li>
-              <a href="#" className="nav-link hover:text-gray-300">Contacto</a>
-            </li>
-            <li className="text-sm"></li>
+          <li className="mt-44 lg:m-0">
+            <Link href="/" className="nav-link hover:text-gray-300">
+              Inicio
+            </Link>
+          </li>
+          <li>
+            <Link href="/nosotros" className="nav-link hover:text-gray-300">
+              Nosotros
+            </Link>
+          </li>
+          <li>
+            <Link href="/servicios" className="nav-link hover:text-gray-300">
+              Servicios
+            </Link>
+          </li>
+          <li>
+            <Link href="/contacto" className="nav-link hover:text-gray-300">
+              Contacto
+            </Link>
+          </li>
+          <li className="text-sm"></li>
           </ul>
 
           <button 
