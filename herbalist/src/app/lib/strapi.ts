@@ -1,10 +1,9 @@
 const { STRAPI_HOST, STRAPI_TOKEN } = process.env
 
-console.log('!!!!!!!!!!!!!!!', STRAPI_HOST, STRAPI_TOKEN)
-export function query (url: string){
-    return fetch(`${STRAPI_HOST}/api/${url}`,{
-        headers: {
-            Authorization: `Bearer ${STRAPI_TOKEN}`
-        }
-    }).then(res => res.json())
+export function query(url: string) {
+  return fetch(`${STRAPI_HOST}/api/${url}`, {
+    headers: {
+      'Authorization': `Bearer ${STRAPI_TOKEN}`
+    }
+  }).then(res => res.json())
 }

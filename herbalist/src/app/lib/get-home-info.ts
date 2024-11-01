@@ -1,9 +1,15 @@
 import { query } from "./strapi";
 
-export function getHomeInfo() {
-    return query('home')
-    .then(res => {
-        console.log(res.data)
-        return res.data
-    })
+export async function  getHomeInfo() {
+    try {
+        const response = await query('home');
+        if (!response.data) {
+          throw new Error('No data received from API');
+        }
+        console.log(response.data);
+        return response.data;
+      } catch (error) {
+        console.error('Error fetching home info:', error);
+        throw error;
+      }
 }

@@ -50,8 +50,8 @@ export const Hero = async () => {
         <article className="bg-[#214842] px-6 py-20 relative flex items-center justify-center flex-col gap-4 text-center text-white xl:flex xl:min-h-screen xl:w-1/2 xl:pt-72 xl:justify-start xl:items-end xl:pr-0">
         {/* <img src="/img_hero.png" className="w-40 xl:absolute xl:w-[24rem] xl:left-[-13rem] xl:top-[6rem]" alt="" /> */}
         <Image 
-            src="/img/hero.png" 
-            className="w-40 xl:w-full" 
+            src="/img_hero.png" 
+            className="w-40 xl:absolute xl:w-[24rem] xl:left-[-13rem] xl:top-[6rem]" 
             alt="Hero image"
             width={400}    // Este valor debe ajustarse a las dimensiones reales de tu imagen
             height={300}   // Este valor debe ajustarse a las dimensiones reales de tu imagen
